@@ -35,12 +35,8 @@ jobs:
       - name: deploy
         uses: azure/arm-deploy@v1
         with:
-            subscriptionid: ${{ vars.SUBSCRIPTIONID}}
-            resourcegroup: ${{ vars.RESOURCEGROUP }}
-            configurationStoreName : ${{ vars.CONFIGURATIONSTORENAME }}
-            functionAppName : ${{ vars.FUNCTIONAPPNAME }}
-            functionName : ${{ vars.FUNCTIONNAME }}
-            location : ${{ vars.LOCATION }}
+            subscriptionId: ${{ vars.SUBSCRIPTIONID}}
+            resourceGroupName: ${{ vars.RESOURCEGROUP }}
             template: ./bicep/eventgridtrigger.bicep
+            parameters: 'configurationStoreName= ${{ vars.CONFIGURATIONSTORENAME }} functionAppName= ${{ vars.FUNCTIONAPPNAME }} functionName= ${{ vars.FUNCTIONNAME }} location= ${{ vars.LOCATION }}'
             failOnStdErr: false
-
