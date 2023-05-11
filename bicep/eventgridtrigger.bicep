@@ -10,7 +10,7 @@ param location string = resourceGroup().location
 
 var configurationStoreId = '/subscriptions/${subscriptionid}/resourceGroups/${resourcegroup}/providers/Microsoft.AppConfiguration/configurationStores/${configurationStoreName}'
 var functionAppId = '/subscriptions/${subscriptionid}/resourceGroups/${resourcegroup}/providers/Microsoft.Web/sites/${functionAppName}'
-
+var functionAppResourceId = '${functionAppId}/functions/${functionName}'
 
 resource systemTopicResource 'Microsoft.EventGrid/systemTopics@2022-06-15' = {
   name: systemTopicName
@@ -27,7 +27,7 @@ resource systemTopicSubscription 'Microsoft.EventGrid/systemTopics/eventSubscrip
   properties: {
     destination: {
       properties: {
-        resourceId: '${functionAppId}/functions/${functionName}'
+        resourceId: resourceId(functionAppResourceId, '2021-02-01-preview')
         maxEventsPerBatch: 1
         preferredBatchSizeInKilobytes: 64
       }
