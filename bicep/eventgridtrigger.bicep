@@ -27,7 +27,7 @@ resource systemTopicSubscription 'Microsoft.EventGrid/systemTopics/eventSubscrip
   properties: {
     destination: {
       properties: {
-        resourceId: resourceId(functionAppResourceId, '2021-02-01-preview')
+        resourceId: resourceId('Microsoft.Web/sites/functions', functionAppName , functionName)
         maxEventsPerBatch: 1
         preferredBatchSizeInKilobytes: 64
       }
