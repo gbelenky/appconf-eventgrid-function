@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "appconf_eventgrid_function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7215",
+      "launchBrowser": false
+    }
+  }
+}
