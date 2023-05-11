@@ -38,6 +38,6 @@ jobs:
             subscriptionId: ${{ vars.SUBSCRIPTIONID}}
             resourceGroupName: ${{ vars.RESOURCEGROUP }}
             template: ./bicep/eventgridtrigger.bicep
-            parameters: "configurationStoreName= ${{ vars.CONFIGURATIONSTORENAME }} functionAppName= ${{ vars.FUNCTIONAPPNAME }} functionName= ${{ vars.FUNCTIONNAME }} location= ${{ vars.LOCATION }}
+            parameters: "configurationStoreName= ${{ vars.CONFIGURATIONSTORENAME }} functionAppName= ${{ vars.FUNCTIONAPPNAME }} functionName= ${{ vars.FUNCTIONNAME }} location= ${{ vars.LOCATION }}"
             failOnStdErr: false
 
