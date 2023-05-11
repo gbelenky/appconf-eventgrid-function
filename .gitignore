@@ -269,3 +269,5 @@ __queuestorage*
 __tablestorage*
 __azurite*
 
+#arm templates
+local__*
