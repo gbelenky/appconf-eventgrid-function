@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy EventGrid Subscription to Function App in dev environment
+name: Deploy EventGrid Subscription to Function App in prod environment
   
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
