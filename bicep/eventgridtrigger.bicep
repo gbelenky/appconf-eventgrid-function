@@ -9,8 +9,6 @@ param functionName string
 param location string = resourceGroup().location
 
 var configurationStoreId = '/subscriptions/${subscriptionid}/resourceGroups/${resourcegroup}/providers/Microsoft.AppConfiguration/configurationStores/${configurationStoreName}'
-var functionAppId = '/subscriptions/${subscriptionid}/resourceGroups/${resourcegroup}/providers/Microsoft.Web/sites/${functionAppName}'
-var functionAppResourceId = '${functionAppId}/functions/${functionName}'
 
 resource systemTopicResource 'Microsoft.EventGrid/systemTopics@2022-06-15' = {
   name: systemTopicName
