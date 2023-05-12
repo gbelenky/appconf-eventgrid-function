@@ -18,7 +18,7 @@ namespace GBelenky.EventTrigger
         [Function("EventGridTrigger")]
         public void Run([EventGridTrigger] MyEvent input)
         {
-            _logger.LogInformation(input.Data.ToString());
+            _logger.LogInformation($"Changing the code: {input.Data.ToString()}");
         }
     }
 
